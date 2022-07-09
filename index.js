@@ -35,4 +35,12 @@ function createBot () {
         bot.on('error', err => console.log(err))
         bot.on('end', createBot)
 }
+
 createBot()
+
+setInterval(function(str1, str2) {
+  console.log(str1 + " " + str2);
+   createBot()
+}, 27000, "Hello.", "How are you?");
+
+
